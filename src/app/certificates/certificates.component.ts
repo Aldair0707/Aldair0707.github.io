@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { CertificatesService } from '../services/certificates-service/certificates.service';
+import { Certificates } from '../models/certificates/certificates.model';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-certificates',
@@ -6,5 +9,22 @@ import { Component } from '@angular/core';
   styleUrl: './certificates.component.css'
 })
 export class CertificatesComponent {
+
+    certificates: Certificates = new Certificates();
+  
+    constructor(public certificatesService: CertificatesService)
+    {
+      console.log(this.certificatesService);
+      this.certificatesService.getCertificates().snapshotChanges().pipe(
+      map(changes =>
+	  changes.map(c =>
+            ({ id: c.payload.doc.id, ...c.payload.doc.data() })
+	  )
+      )
+      ).subscribe(data=>  {
+        this.certificates = data[0];
+	console.log(this.certificates);
+      });
+    }
 
 }
