@@ -8,5 +8,7 @@ jobs:
   ci_cd_deploy_release:
     runs-on: ubuntu-latest
     steps:
+      - run: ls -la
       - uses: actions/checkout@v2
+      - run: ls-la
       - run: echo 'hello world'
