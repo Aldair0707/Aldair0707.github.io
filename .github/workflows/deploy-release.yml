@@ -8,7 +8,10 @@ jobs:
   ci_cd_deploy_release:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -la
       - uses: actions/checkout@v2
-      - run: ls -la
-      - run: echo 'hello world'
+      - run: echo ‘hello world’
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20.x
+
