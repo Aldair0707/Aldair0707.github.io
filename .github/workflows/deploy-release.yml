@@ -7,6 +7,7 @@ on:
 jobs:
   ci_cd_deploy_release:
     runs-on: ubuntu-latest
+    
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
@@ -40,12 +41,12 @@ jobs:
         env: 
          CI_COMMIT_MESSAGE: save spark results
          CI_COMMIT_AUTHOR: aldair 
-        run: |
-         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
-         git config --global user.email "adsoft@live.com.mx"
-         git add results
-         git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-         git push
+         run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "adsoft@live.com.mx"
+          git add results
+          git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push
 
 
 
