@@ -22,7 +22,7 @@ jobs:
         run: npm run build
 
       - name: list dir
-        run: ls -la dist/mycv
+        run: ls -la dist/mycv/browser
 
 
 
