@@ -34,9 +34,8 @@ jobs:
         run: cp dist/mycv/browser/*.* docs
 
       - name: list docs
-        run: ls -la docs
+        run: ls -la docs\
 
-        
       - name: GIT commit and push docs
         env: 
           CI_COMMIT_MESSAGE: save spark results
@@ -46,7 +45,7 @@ jobs:
           git config --global user.email "aldair@live.com.mx"
           git add .
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-          git push
+          git push 
 
 
 
