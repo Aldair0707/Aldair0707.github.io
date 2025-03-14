@@ -43,7 +43,7 @@ jobs:
           CI_COMMIT_AUTHOR: aldair 
         run: |
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
-          git config --global user.email "adsoft@live.com.mx"
+          git config --global user.email "aldair@live.com.mx"
           git add .
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push
