@@ -1,0 +1,43 @@
+name: CI/CD deploy release
+on: 
+  #push:
+    #branches: [ "master"]
+  pull_request:
+    branches: [ "master"]
+jobs:
+  ci_cd_deploy_master:
+    runs-on: ubuntu-latest
+    
+    #permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      #contents: write
+
+    steps:
+      - run: ls -la 
+      - uses: actions/checkout@v2
+      #- run: git checkout deploy-release
+      - run: echo ‘hello world’
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20.x
+   
+      - name: install dependencies 
+        run: npm ci
+
+      - name: build setup
+        run: npm run build
+
+      - name: list dir
+        run: ls -la dist/mycv/browser
+
+      
+
+
+
+
+
+
+
+
