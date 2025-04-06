@@ -1,4 +1,6 @@
-<p>interests works!</p>
-<p>
-  {{interestsService.accesoInterests}}
-</p>
+<ul *ngFor="let job of interests;">
+   <li>
+     Interests: <br>
+     {{ job.work }}
+   </li>
+</ul>
