@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { WorkExperienceService } from '../services/work-experience-service/work-experience-service.service';
-import { WorkExperience } from '../models/work-experience/work-experience.model';import { map } from 'rxjs/operators';
+import { WorkExperience } from '../models/work-experience/work-experience.model';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-work-experience',
