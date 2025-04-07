@@ -1,20 +1,19 @@
-<table border="1">
- <tr>
-   <td colspan="2"> <app-header></app-header> </td>
- </tr>
- <tr>
-   <td> <app-work-experience></app-work-experience> </td>
-   <td> <app-skills></app-skills> </td>
- </tr>
+<div class="main-container">
+   
+  <app-header></app-header>
 
- <tr>
-   <td> <app-education></app-education> </td>
-   <td> <app-certificates></app-certificates> </td>
- </tr>
+   
+  <div class="resume-layout">
+    <div class="left-column">
+      <app-work-experience></app-work-experience>
+      <app-education></app-education>
+    </div>
+    <div class="right-column">
+      <app-skills></app-skills>
+      <app-certificates></app-certificates>
+      <app-languages></app-languages>
+      <app-interests></app-interests>
+    </div>
+  </div>
+</div>
 
- <tr>
-   <td> <app-languages></app-languages> </td>
-   <td> <app-interests></app-interests> </td>
- </tr>
-
-</table>
