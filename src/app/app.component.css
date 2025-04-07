@@ -1,0 +1,28 @@
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f5f7fa;
+}
+
+.resume-layout {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1px;
+  margin-top: 10px;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+section {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
