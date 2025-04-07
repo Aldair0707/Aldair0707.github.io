@@ -1,8 +1,9 @@
-<section>
-<div *ngFor="let category of skills">
-  <p>{{ category.title }}</p>
-  <ul>
-    <li *ngFor="let skill of category.items">{{ skill }}</li>
-  </ul>
-</div>
-</section>
+<ul *ngFor= "let job of skills;">
+  <li>
+      
+     {{ job.language }} <br>
+     {{ job.framework }} <br>
+     {{ job.database }}
+  </li>
+
+</ul>
