@@ -1,5 +1,6 @@
 export class Skills {
   id?: string; 
-  title!: string; 
-  items!: string[];
+  framework?: string=''; 
+  language?: string='';
+  database?: string='';
 }
