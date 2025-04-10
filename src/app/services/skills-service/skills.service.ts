@@ -10,22 +10,14 @@ import { Skills } from '../../models/skills/skills.model';
 export class SkillsService {
 
   private dbPath = '/skills';
-  skillsRef: AngularFirestoreCollection<Skills>;
-
-  constructor(private db: AngularFirestore) {
-    this.skillsRef = db.collection(this.dbPath);
-  }
-
   
-  getSkills(): Observable<Skills[]> {
-    return this.skillsRef.snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c => ({
-          id: c.payload.doc.id,  // Se asigna el ID del documento
-          ...c.payload.doc.data() as Skills // Se asegura que los datos coincidan con el modelo
-        }))
-      )
-    );
-  }
+    skillsRef: AngularFirestoreCollection<Skills>;
+  
+    constructor(private db: AngularFirestore) {
+    this.skillsRef = db.collection(this.dbPath);
+    }
+    getSkills(): AngularFirestoreCollection<Skills>{
+    return this.skillsRef;
+    }
 }
 

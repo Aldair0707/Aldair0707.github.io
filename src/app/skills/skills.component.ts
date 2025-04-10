@@ -1,4 +1,4 @@
-import{ Component, OnInit } from '@angular/core';
+import{ Component } from '@angular/core';
 import { SkillsService } from '../services/skills-service/skills.service';
 import { Skills } from '../models/skills/skills.model';
 import { map } from 'rxjs/operators';
@@ -8,17 +8,24 @@ import { map } from 'rxjs/operators';
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css'
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent{
   
-  skills: Skills[] = []; // Ahora es un array para almacenar todas las categorías
+  skills: Skills[] = []; 
 
-  constructor(private skillsService: SkillsService) {}
-
-  ngOnInit() {
-    this.skillsService.getSkills().subscribe((data: Skills[]) => {
-      this.skills = data;
-      console.log(this.skills);
-    });
-  }
+  constructor(public skillsService: SkillsService)
+     {
+       console.log(this.skillsService);
+       this.skillsService.getSkills().snapshotChanges().pipe(
+          map(changes =>
+      changes.map(c => ({
+        id: c.payload.doc.id, ...c.payload.doc.data()
+      })
+      )
+    )
+       ).subscribe(data => {
+    this.skills = data;
+          console.log(this.skillsService);	
+       });
+     }
 }
 

@@ -1,0 +1,36 @@
+.main-container {
+  max-width: 900px;
+  margin: 60px auto;
+  background-color: white;
+  padding: 40px 50px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+  border-radius: 8px;  
+}
+
+.resume-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 0;
+  margin-top: 20px;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.left-column app-work-experience,
+.left-column app-education,
+.right-column app-skills,
+.right-column app-certificates,
+.right-column app-languages,
+.right-column app-interests {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+}

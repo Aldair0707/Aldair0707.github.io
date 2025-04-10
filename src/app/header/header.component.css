@@ -1,0 +1,57 @@
+
+tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+td {
+  flex: 1;
+  padding: 10px;
+  vertical-align: top;
+  font-size: 1rem;
+  color: #333;
+}
+
+td:first-child {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2c3e50;
+  line-height: 1.4;
+}
+
+td img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #4CAF50;
+  display: block;
+  margin: 0 auto;
+}
+
+td:last-child {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  tr {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  td {
+    width: 100%;
+    text-align: center;
+  }
+
+  td:last-child {
+    text-align: center;
+  }
+}
