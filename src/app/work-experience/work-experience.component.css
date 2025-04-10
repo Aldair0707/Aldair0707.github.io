@@ -1,13 +1,4 @@
-/* Contenedor general de la sección */
-:host {
-  display: block;
-  background-color: white;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-/* Título opcional */
 :host::before {
   content: "Work Experience";
   display: block;
@@ -19,14 +10,12 @@
   padding-bottom: 6px;
 }
 
-/* Lista general */
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Cada trabajo */
 li {
   margin-bottom: 20px;
   padding-bottom: 16px;
@@ -34,20 +23,18 @@ li {
   line-height: 1.6;
 }
 
-/* Fechas y ubicación */
 li i {
   color: #777;
   font-style: italic;
   margin-left: 8px;
 }
 
-/* Posición destacada */
 li b {
   font-size: 1.1rem;
   color: #333;
 }
 
-/* Logros */
+
 li::before {
   margin-right: 6px;
   color: #4CAF50;
