@@ -1,28 +1,36 @@
 .main-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #f5f7fa;
+  max-width: 900px;
+  margin: 60px auto;
+  background-color: white;
+  padding: 40px 50px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+  border-radius: 8px;  
 }
 
 .resume-layout {
   display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 1px;
-  margin-top: 10px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 0;
+  margin-top: 20px;
 }
 
 .left-column,
 .right-column {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 0;
 }
 
-section {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 24px;
+.left-column app-work-experience,
+.left-column app-education,
+.right-column app-skills,
+.right-column app-certificates,
+.right-column app-languages,
+.right-column app-interests {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
 }
-
