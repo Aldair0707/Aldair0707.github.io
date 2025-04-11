@@ -1,26 +1,35 @@
-
-:host::before {
-  content: "Work Experience";
-  display: block;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 16px;
-  border-bottom: 2px solid #4CAF50;
-  padding-bottom: 6px;
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-li i {
-  color: #777;
+.experience-item {
+  padding-left: 8px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #888;
   font-style: italic;
-  margin-left: 8px;
 }
 
-li b {
-  font-size: 1.1rem;
+.experience-role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.experience-company {
+  font-size: 0.95rem;
   color: #333;
+  margin-bottom: 4px;
 }
 
-
- 
-
+.experience-accomplishments p {
+  font-size: 0.9rem;
+  margin: 4px 0 0 0;
+  line-height: 1.4;
+}

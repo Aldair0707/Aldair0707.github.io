@@ -1,7 +1,7 @@
-<ul *ngFor="let job of languages;">
-  <li>
-     
-    {{ job.exLanguage}} <br>
-    {{ job.originLanguage }}
-  </li>
-</ul>
+<h3 class="section-title">Languages</h3>
+
+<div class="tags-container">
+  <span class="tag-item" *ngFor="let job of languages">
+    {{ job.language }}
+  </span>
+</div>
