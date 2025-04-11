@@ -1,8 +1,15 @@
-<ul *ngFor= "let job of education;">
-  <li>
-      
-     {{ job.highschool }} <br>
-     {{ job.university }} <br>
-  </li>
+<h3 class="section-title">Education</h3>
 
-</ul>
+<div class="education-list">
+  <div class="education-item" *ngFor="let job of education">
+    <div class="education-header">
+      <span class="education-dates">{{ job.startDate }} - {{ job.endDate }}</span>
+    </div>
+    <div class="education-institution">
+      <strong>{{ job.institution }}</strong>
+    </div>
+    <div class="education-university">
+      {{ job.university }}
+    </div>
+  </div>
+</div>

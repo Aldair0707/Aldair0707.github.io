@@ -1,4 +1,3 @@
 export class Languages {
-  exLanguage?: string = '';
-  originLanguage?: string = '';
+   language?: string='';
 }
