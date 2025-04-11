@@ -1,9 +1,11 @@
-<ul *ngFor= "let job of skills;">
-  <li>
-      
-     {{ job.language }} <br>
-     {{ job.framework }} <br>
-     {{ job.database }}
-  </li>
-
-</ul>
+<h3 class="section-title">Skills</h3>
+<div class="skills-list">
+  <div class="skill-item" *ngFor="let job of skills">
+    <div class="skill-label-bar">
+      <span class="skill-title">{{ job.skills }}</span>
+      <div class="skill-bar">
+        <div class="skill-fill" [style.width.%]="job.nivel || 0"></div>
+      </div>
+    </div>
+  </div>
+</div>

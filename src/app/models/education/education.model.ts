@@ -1,4 +1,7 @@
 export class Education{
-highschool?: string = 'Cobaev 56';
-university?: string = 'Universidad Veracruzana';
+ id?: string;
+ institution?: string = '';
+ university?: string = '';
+ startDate?: string='';
+ endDate?: string='';
 }	
