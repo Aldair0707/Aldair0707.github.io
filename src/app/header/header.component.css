@@ -1,43 +1,80 @@
-
-tr {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding: 20px 0;
   flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 1px;
+  margin-bottom: 1px;
 }
 
-td {
+.header-left {
   flex: 1;
-  padding: 10px;
-  vertical-align: top;
-  font-size: 1rem;
-  color: #333;
+  text-align: left;
 }
 
-td:first-child {
+.name {
   font-size: 1.4rem;
   font-weight: bold;
   color: #2c3e50;
-  line-height: 1.4;
 }
 
-td img {
+.goal {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.header-photo img {
   width: 140px;
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #4CAF50;
-  display: block;
-  margin: 0 auto;
+  border: 2px solid #4CAF50;
 }
 
-td:last-child {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.6;
+.header-contact {
+  flex: 1;
   text-align: right;
 }
 
- 
+.header-contact div {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-contact i {
+  color: #4CAF50;
+}
+
+
+/* 📱 Responsivo */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-name,
+  .header-contact {
+    text-align: center;
+  }
+
+  .header-contact {
+    font-size: 1rem;
+  }
+
+  .header-photo img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
